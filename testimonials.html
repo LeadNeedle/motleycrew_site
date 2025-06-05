@@ -113,23 +113,89 @@
         }
     }
 
-    <!-- Navigation -->
-    <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
-        <div class="flex items-center">
-            <div class="bg-blue-600 p-2 rounded-lg mr-3">
-                <i class="fas fa-car text-white text-2xl"></i>
+    <!-- Replace the existing navigation section (around line 100-115) -->
+    <!-- Sticky Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-transform duration-300" style="background: linear-gradient(135deg, #0c162d 0%, #121c38 100%); box-shadow: 0 2px 10px rgba(0,0,0,0.3);">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                    <i class="fas fa-car text-white text-xl"></i>
+                </div>
+                <h1 class="text-white text-xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h1>
             </div>
-            <h1 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h1>
+            
+            <div class="hidden md:flex space-x-6 items-center nav-links">
+                <a href="index.html" class="text-white hover:text-blue-400 transition duration-300">Home</a>
+                <a href="our-work.html" class="text-white hover:text-blue-400 transition duration-300">Our Work</a>
+                <a href="testimonials.html" class="text-white hover:text-blue-400 transition duration-300">Testimonials</a>
+                <a href="index.html#book" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+                    Book Now
+                </a>
+            </div>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-white text-2xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        
+        <div id="mobile-menu" class="md:hidden border-t border-blue-700 hidden" style="background: linear-gradient(135deg, #0c162d 0%, #121c38 100%);">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="index.html" class="block text-white hover:text-blue-400 transition duration-300 py-2">Home</a>
+                <a href="our-work.html" class="block text-white hover:text-blue-400 transition duration-300 py-2">Our Work</a>
+                <a href="testimonials.html" class="block text-white hover:text-blue-400 transition duration-300 py-2">Testimonials</a>
+                <a href="index.html#book" class="block text-white hover:text-blue-400 transition duration-300 py-2">Book Now</a>
+            </div>
         </div>
-        <div class="flex space-x-6 items-center">
-            <a href="index.html" class="text-white hover:text-blue-400 transition duration-300">Home</a>
-            <a href="our-work.html" class="text-white hover:text-blue-400 transition duration-300">Our Work</a>
-            <a href="testimonials.html" class="text-white hover:text-blue-400 transition duration-300">Testimonials</a>
-            <a href="index.html#book" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
-                Book Now
-            </a>
-        </div>
-    </nav>
+    </header>
+    
+    <!-- Add padding to account for fixed header -->
+    <div class="pt-20">
+
+    <!-- Add this script before closing </body> tag -->
+    <script>
+    // Header hide/show on scroll
+    let lastScrollTop = 0;
+    const header = document.getElementById('header');
+    
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (scrollTop > lastScrollTop && scrollTop > 100) {
+            // Scrolling down - hide header
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up - show header
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollTop = scrollTop;
+    });
+    
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = mobileMenuBtn.querySelector('i');
+    
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+            
+            if (mobileMenu.classList.contains('hidden')) {
+                menuIcon.className = 'fas fa-bars';
+            } else {
+                menuIcon.className = 'fas fa-times';
+            }
+        });
+        
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+                menuIcon.className = 'fas fa-bars';
+            });
+        });
+    }
+    </script>
 
     <!-- Hero Section -->
     <section class="py-16 md:py-24 px-4">

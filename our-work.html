@@ -14,7 +14,25 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0c162d 0%, #121c38 100%);
             color: #ffffff;
-            overflow-x: hidden;
+            /* Mobile Horizontal Scroll Fix */
+            @media (max-width: 768px) {
+                html, body {
+                    overflow-x: hidden;
+                    width: 100%;
+                }
+                
+                * {
+                    max-width: 100vw;
+                    box-sizing: border-box;
+                }
+                
+                .container {
+                    max-width: 100%;
+                    overflow-x: hidden;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                }
+            }
             position: relative;
         }
         

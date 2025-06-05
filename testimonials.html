@@ -82,16 +82,25 @@
     </style>
 </head>
 <body class="relative">
-    <!-- Soap bubbles floating upward -->
-    <div class="bubbles-container">
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-        <div class="bubble"></div>
-    </div>
+    /* Mobile Horizontal Scroll Fix */
+    @media (max-width: 768px) {
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        * {
+            max-width: 100vw;
+            box-sizing: border-box;
+        }
+        
+        .container {
+            max-width: 100%;
+            overflow-x: hidden;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
 
     <!-- Navigation -->
     <nav class="container mx-auto px-4 py-6 flex justify-between items-center">

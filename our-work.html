@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Work | MotleyCrew Mobile Hand Car Wash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0c162d 0%, #121c38 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 15% 50%, rgba(52, 152, 219, 0.15) 0%, transparent 25%);
+            z-index: -1;
+        }
+        
+        .bubbles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 15s infinite ease-in;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateX(100px);
+                opacity: 0.5;
+            }
+            100% {
+                bottom: 100%;
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+        }
+        
+        .slide-in {
+            animation: slideIn 1.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .work-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .work-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(52, 152, 219, 0.3);
+        }
+        
+        .before-after {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+        }
+        
+        .before-after::before {
+            content: "BEFORE";
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(239, 68, 68, 0.9);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            z-index: 2;
+        }
+        
+        .before-after.after::before {
+            content: "AFTER";
+            background: rgba(34, 197, 94, 0.9);
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Soap bubbles floating upward -->
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                <i class="fas fa-car text-white text-2xl"></i>
+            </div>
+            <h1 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h1>
+        </div>
+        <div class="flex space-x-6 items-center">
+            <a href="index.html" class="text-white hover:text-blue-400 transition duration-300">Home</a>
+            <a href="our-work.html" class="text-white hover:text-blue-400 transition duration-300">Our Work</a>
+            <a href="testimonials.html" class="text-white hover:text-blue-400 transition duration-300">Testimonials</a>
+            <a href="index.html#book" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+                Book Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="slide-in" style="animation-delay: 0.3s">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                    Our <span class="text-blue-400">Work</span> Speaks for Itself
+                </h2>
+            </div>
+            <div class="slide-in" style="animation-delay: 0.6s">
+                <p class="text-xl md:text-2xl text-blue-300 mb-8 max-w-3xl mx-auto">
+                    See the incredible transformations we've achieved for our Atlanta customers
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto mb-16">
+                <!-- Video 1 -->
+                <div class="slide-in" style="animation-delay: 0.2s">
+                    <video class="w-full h-auto rounded-lg shadow-lg" autoplay loop muted playsinline>
+                        <source src="../static/images/Video-404.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="slide-in" style="animation-delay: 0.4s">
+                    <video class="w-full h-auto rounded-lg shadow-lg" autoplay loop muted playsinline>
+                        <source src="../static/images/Video-578.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="slide-in" style="animation-delay: 0.6s">
+                    <video class="w-full h-auto rounded-lg shadow-lg" autoplay loop muted playsinline>
+                        <source src="../static/images/Video-700.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Gallery -->
+    <section class="py-12 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+                <!-- Photo 1 -->
+                <div class="slide-in" style="animation-delay: 0.2s">
+                    <img src="../static/images/240930320_870950983532489_4517727816801731821_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 2 -->
+                <div class="slide-in" style="animation-delay: 0.4s">
+                    <img src="../static/images/240981862_388520832626696_8179612985857999121_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 3 -->
+                <div class="slide-in" style="animation-delay: 0.6s">
+                    <img src="../static/images/241444523_539887693786675_479170384914965543_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 4 -->
+                <div class="slide-in" style="animation-delay: 0.8s">
+                    <img src="../static/images/244787966_866094044267991_1599325169259906429_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="slide-in" style="animation-delay: 1.0s">
+                    <img src="../static/images/245802079_1059090624912718_1205807383787609265_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="slide-in" style="animation-delay: 1.2s">
+                    <img src="../static/images/248626236_941448459780565_7279649155007724777_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 7 -->
+                <div class="slide-in" style="animation-delay: 1.4s">
+                    <img src="../static/images/263265774_1047053829411311_3825254926868519278_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 8 -->
+                <div class="slide-in" style="animation-delay: 1.6s">
+                    <img src="../static/images/278091100_552105636200566_7003692213293402098_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+
+                <!-- Photo 9 -->
+                <div class="slide-in" style="animation-delay: 1.8s">
+                    <img src="../static/images/278899487_3155352458115856_4275410025581213736_n.jpg" alt="Car detailing work" class="w-full h-auto rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Showcase -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <h3 class="text-3xl md:text-4xl font-bold text-center mb-16 slide-in">
+                Our <span class="text-blue-400">Services</span> in Action
+            </h3>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Service 1 -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 rounded-xl p-8 text-center slide-in" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-spray-can text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Exterior Detailing</h4>
+                    <p class="text-blue-300 mb-4">Complete wash, clay bar treatment, polish, and protective wax application</p>
+                    <ul class="text-sm text-blue-200 space-y-2">
+                        <li>• Hand wash & dry</li>
+                        <li>• Clay bar treatment</li>
+                        <li>• Paint correction</li>
+                        <li>• Premium wax protection</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 rounded-xl p-8 text-center slide-in" style="animation-delay: 0.4s">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-couch text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Interior Detailing</h4>
+                    <p class="text-blue-300 mb-4">Deep cleaning and conditioning of all interior surfaces and materials</p>
+                    <ul class="text-sm text-blue-200 space-y-2">
+                        <li>• Vacuum & steam clean</li>
+                        <li>• Leather conditioning</li>
+                        <li>• Dashboard protection</li>
+                        <li>• Odor elimination</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 rounded-xl p-8 text-center slide-in" style="animation-delay: 0.6s">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">Paint Protection</h4>
+                    <p class="text-blue-300 mb-4">Advanced ceramic coatings and paint protection films for lasting shine</p>
+                    <ul class="text-sm text-blue-200 space-y-2">
+                        <li>• Ceramic coating application</li>
+                        <li>• Paint protection film</li>
+                        <li>• UV protection</li>
+                        <li>• Hydrophobic finish</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto text-center">
+            <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 rounded-2xl p-12 max-w-4xl mx-auto">
+                <h3 class="text-3xl md:text-4xl font-bold mb-6">Ready for Your <span class="text-blue-400">Transformation?</span></h3>
+                <p class="text-xl text-blue-300 mb-8">Let us bring your vehicle back to life with our professional detailing services</p>
+                <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-lg transition duration-300 inline-block">
+                    Book Your Detail Today
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-4 border-t border-blue-500 border-opacity-20">
+        <div class="container mx-auto">
+            <div class="text-center">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                        <i class="fas fa-car text-white text-2xl"></i>
+                    </div>
+                    <h1 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h1>
+                </div>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://www.instagram.com/motleycrewautospa/?hl=en" target="_blank" class="w-12 h-12 bg-blue-900 hover:bg-blue-700 rounded-full flex items-center justify-center">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/place/MotleyCrew+Mobile+Hand+Car+Wash+(Mobile+Detailing)/@33.9191351,-84.505095,13.73z/data=!4m15!1m8!3m7!1s0x88f5116e1d649e55:0xb1fd607985fc1c1!2sMotleyCrew+Mobile+Hand+Car+Wash+(Mobile+Detailing)!8m2!3d33.915429!4d-84.482946!10e1!16s%2Fg%2F11f6kr04mz!3m5!1s0x88f5116e1d649e55:0xb1fd607985fc1c1!8m2!3d33.915429!4d-84.482946!16s%2Fg%2F11f6kr04mz?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="w-12 h-12 bg-blue-900 hover:bg-blue-700 rounded-full flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt text-xl"></i>
+                    </a>
+                </div>
+                <p class="text-blue-400">© 2023 MotleyCrew Mobile Hand Car Wash. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create more bubbles
+            const bubbleContainer = document.querySelector('.bubbles-container');
+            for (let i = 0; i < 20; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                // Randomize properties
+                const leftPos = Math.floor(Math.random() * 100);
+                const size = Math.floor(Math.random() * 10) + 5;
+                const delay = Math.floor(Math.random() * 10);
+                const duration = Math.floor(Math.random() * 10) + 15;
+                
+                bubble.style.left = leftPos + '%';
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+                bubble.style.animationDuration = duration + 's';
+                bubble.style.animationDelay = delay + 's';
+                
+                bubbleContainer.appendChild(bubble);
+            }
+            
+            // Add slide-in animations to elements when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('.slide-in').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Testimonials | MotleyCrew Mobile Hand Car Wash</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0c162d 0%, #121c38 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 15% 50%, rgba(52, 152, 219, 0.15) 0%, transparent 25%);
+            z-index: -1;
+        }
+        
+        .bubbles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 15s infinite ease-in;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateX(100px);
+                opacity: 0.5;
+            }
+            100% {
+                bottom: 100%;
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+        }
+        
+        .slide-in {
+            animation: slideIn 1.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Soap bubbles floating upward -->
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                <i class="fas fa-car text-white text-2xl"></i>
+            </div>
+            <h1 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h1>
+        </div>
+        <div class="flex space-x-6 items-center">
+            <a href="index.html" class="text-white hover:text-blue-400 transition duration-300">Home</a>
+            <a href="our-work.html" class="text-white hover:text-blue-400 transition duration-300">Our Work</a>
+            <a href="testimonials.html" class="text-white hover:text-blue-400 transition duration-300">Testimonials</a>
+            <a href="index.html#book" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+                Book Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="slide-in" style="animation-delay: 0.3s">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 leading-tight">
+                    Real <span class="text-blue-400">Reviews</span>
+                </h2>
+            </div>
+            <div class="slide-in" style="animation-delay: 0.6s">
+                <p class="text-xl md:text-2xl text-blue-300 mb-8 max-w-3xl mx-auto">
+                    Authentic Google reviews from real customers who trust MotleyCrew with their vehicles
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Testimonial 1 - Marilyn Simmons Bowe -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 0.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">3 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I contacted Motley Crew two days prior to my appointment. They responded immediately and corresponded with me about my car washing needs. They kept me up to date on when they would arrive and did so on time."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">MS</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Marilyn Simmons Bowe, PhD</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 32 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 - Ricardo Jean -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 0.4s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">2 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I'm happy with the work they've done. Showed up on time and get it done. Very professional. Definitely will use them again."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">RJ</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Ricardo Jean</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 18 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 - Alex Walters -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 0.6s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">3 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Regis did an amazing job today! Arrived exactly when the appointment was scheduled and did an awesome job on my mazda. My car hadn't seen a car wash or vacuum since the time of purchase last December and it looks like it just rolled off the lot."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">AW</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Alex Walters</p>
+                            <p class="text-blue-300 text-sm">1 review</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 - Imeh Archibong -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 0.8s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">5 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"These guys are fantastic. I have used them twice now and will definitely be back. Regis is a professional and does quality work. This last time I did a full detail on my 09 Hyundai and he made my seats look brand new again. I am so impressed. I highly recommend them."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">IA</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Imeh Archibong</p>
+                            <p class="text-blue-300 text-sm">5 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 5 - Jeffrey Sargent -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 1.0s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I found Motley Crew on google. Regis is an extremely professional young man. He follow up with me, confirmed our appointment and arrived within the time he stated. He did an amazing job and his pricing is fair and reasonable."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">JS</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Jeffrey Sargent</p>
+                            <p class="text-blue-300 text-sm">6 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 6 - Brandis Burgess-Hill -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 1.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Regis is amazing! He comes to our office and details our work and personal vehicles. They always look and smell great when he's done. You can't beat the price and professionalism!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">BB</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Brandis Burgess-Hill</p>
+                            <p class="text-blue-300 text-sm">6 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 7 - Oreofe Ogunkanmi -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 1.4s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">5 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Wow!! Regis is the bomb!! His prices are the best! I checked on Groupon etc! His service is unbelievable! My car is DETAILED!!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">OO</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Oreofe Ogunkanmi</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 20 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 8 - Fernando Alvarez -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 1.6s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I highly recommend MotleyCrew Car Wash. Regis was punctual and professional. He did an excellent job washing/detailing both the inside and outside of my car. I can say that I will absolutely be a regular customer from here on out. 5/5 Stars!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">FA</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Fernando Alvarez</p>
+                            <p class="text-blue-300 text-sm">7 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 9 - Edward McCray -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 1.8s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">5 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"These guys are seriously the best, they come to you! and the job they do goes unmatched! Seriously my car hasn't look better since I bought it!! I definitely will call them for my next car wash!!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">EM</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Edward McCray</p>
+                            <p class="text-blue-300 text-sm">2 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 10 - Heather Ashford -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 2.0s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I've been using MotleyCrew to detail my BMW for over 2 years, and I absolutely love this company! I won't use anyone else. They come to my job or home to clean my car; which is so convenient. The prices are unbeatable for the service and professionalism."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">HA</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Heather Ashford</p>
+                            <p class="text-blue-300 text-sm">10 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 11 - Daniel Bradfield -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 2.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I highly recommend giving Motleys. Regis was on time, professional, and thorough. My car looks and smells great. I look forward to having my vehicle detailed regularly as the cost for the service is extremely competitive."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">DB</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Daniel Bradfield</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 42 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 12 - Olu Sanya -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 2.4s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Regis does an amazing job cleaning my PORSCHE Macan. The best part is I don't have to worry about scratches because it's hand wash & he is mobile, so he can come to either my home or office. I used to wait 1.5 hrs waiting for my car to be washed at other location car wash. Regis is your guy to take care of that Auto Baby."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">OS</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Olu Sanya</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 17 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 13 - Imara Sudah -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 2.6s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">5 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Very precise detail service!!! I got the 'Motley special'. He went above and beyond to make sure every part of my car was spotless. It smelled so fresh when I got in and the scent lasted over a week!!!"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">IS</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Imara Sudah</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 62 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 14 - Lauren Gregory -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 2.8s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">5 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I had a great experience! My old car looks almost new inside. I highly recommend and will be using their service again."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">LG</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Lauren Gregory</p>
+                            <p class="text-blue-300 text-sm">5 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 15 - Girish Deshmukh -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 3.0s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">3 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Excellent work by Jelani to get my car cleaned. He made sure the car was sparkle clean. I do not think I will use any other person for this job now on."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">GD</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Girish Deshmukh</p>
+                            <p class="text-blue-300 text-sm">2 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 16 - Nick Balibucci -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 3.2s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"They were Johnny on the spot time wise and did a fantastic Job! AAA++"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">NB</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Nick Balibucci</p>
+                            <p class="text-blue-300 text-sm">6 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 17 - Leigan Worley -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 3.4s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">5 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"Amazing!! They did a wonderful job on mine and my husband's cars. We have told all of our friends and family about them as well."</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">LW</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Leigan Worley</p>
+                            <p class="text-blue-300 text-sm">Local Guide • 35 reviews</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 18 - Bernard Muhammad -->
+                <div class="bg-white bg-opacity-5 backdrop-blur-sm border border-blue-500 border-opacity-20 p-8 rounded-xl slide-in" style="animation-delay: 3.6s">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-blue-300 text-sm ml-2">6 years ago</span>
+                    </div>
+                    <p class="text-lg italic mb-4">"I HIGHLY recommend Motley Crew. Received a great wash, good customer service, & I plan to use Regis's services again"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-3">
+                            <span class="text-white font-bold">BM</span>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Bernard Muhammad</p>
+                            <p class="text-blue-300 text-sm">3 reviews</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- And many more text -->
+    <div class="text-center mt-12">
+        <p class="text-2xl text-blue-300 font-semibold italic">And many more...</p>
+        <p class="text-lg text-blue-400 mt-2">Join hundreds of satisfied customers who trust MotleyCrew!</p>
+    </div>
+</div>
+
+<!-- Call to Action -->
+<section class="py-20 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Experience the Difference?</h2>
+        <p class="text-xl text-blue-300 mb-8">Join hundreds of satisfied customers who trust MotleyCrew for their car care needs.</p>
+        <a href="index.html#book" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition duration-300 transform hover:scale-105">
+            Book Your Service Today
+        </a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="py-12 px-4 relative border-t border-blue-900">
+    <div class="max-w-6xl mx-auto">
+        <div class="text-center">
+            <div class="flex items-center justify-center mb-6">
+                <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                    <i class="fas fa-car text-white text-2xl"></i>
+                </div>
+                <h3 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h3>
+            </div>
+            
+            <div class="text-center">
+                <div class="flex flex-wrap justify-center gap-4 mb-4">
+                    <a href="https://www.instagram.com/motleycrewautospa/?hl=en" target="_blank" class="w-12 h-12 bg-blue-900 hover:bg-blue-700 rounded-full flex items-center justify-center">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/place/MotleyCrew+Mobile+Hand+Car+Wash+(Mobile+Detailing)/@33.9191351,-84.505095,13.73z/data=!4m15!1m8!3m7!1s0x88f5116e1d649e55:0xb1fd607985fc1c1!2sMotleyCrew+Mobile+Hand+Car+Wash+(Mobile+Detailing)!8m2!3d33.915429!4d-84.482946!10e1!16s%2Fg%2F11f6kr04mz!3m5!1s0x88f5116e1d649e55:0xb1fd607985fc1c1!8m2!3d33.915429!4d-84.482946!16s%2Fg%2F11f6kr04mz?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="w-12 h-12 bg-blue-900 hover:bg-blue-700 rounded-full flex items-center justify-center">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </a>
+                </div>
+                <p class="text-blue-400">© 2025 MotleyCrew Mobile Hand Car Wash. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Simple animation trigger for scroll effects
+    document.addEventListener('DOMContentLoaded', function() {
+        // Create more bubbles
+        const bubbleContainer = document.querySelector('.bubbles-container');
+        for (let i = 0; i < 20; i++) {
+            const bubble = document.createElement('div');
+            bubble.classList.add('bubble');
+            
+            // Randomize properties
+            const leftPos = Math.floor(Math.random() * 100);
+            const size = Math.floor(Math.random() * 10) + 5;
+            const delay = Math.floor(Math.random() * 10);
+            const duration = Math.floor(Math.random() * 10) + 15;
+            
+            bubble.style.left = leftPos + '%';
+            bubble.style.width = size + 'px';
+            bubble.style.height = size + 'px';
+            bubble.style.animationDuration = duration + 's';
+            bubble.style.animationDelay = delay + 's';
+            
+            bubbleContainer.appendChild(bubble);
+        }
+        
+        // Add slide-in animations to elements when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('slide-in');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+</body>
+</html>

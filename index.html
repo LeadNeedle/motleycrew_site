@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MotleyCrew Mobile Hand Car Wash | Atlanta</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #0c162d 0%, #121c38 100%);
+            color: #ffffff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(circle at 15% 50%, rgba(52, 152, 219, 0.15) 0%, transparent 25%);
+            z-index: -1;
+        }
+        
+        .shine-animation {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .shine-animation::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.2) 40%, transparent 60%);
+            animation: shine 4s infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(100%, 100%); }
+        }
+        
+        .bubbles-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .bubble {
+            position: absolute;
+            bottom: -100px;
+            width: 20px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            animation: rise 15s infinite ease-in;
+        }
+        
+        .bubble:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+            width: 15px;
+            height: 15px;
+        }
+        
+        .bubble:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+            width: 25px;
+            height: 25px;
+        }
+        
+        .bubble:nth-child(3) {
+            left: 35%;
+            animation-delay: 4s;
+            width: 12px;
+            height: 12px;
+        }
+        
+        .bubble:nth-child(4) {
+            left: 50%;
+            animation-delay: 1s;
+            width: 18px;
+            height: 18px;
+        }
+        
+        .bubble:nth-child(5) {
+            left: 65%;
+            animation-delay: 5s;
+            width: 22px;
+            height: 22px;
+        }
+        
+        .bubble:nth-child(6) {
+            left: 75%;
+            animation-delay: 3s;
+            width: 16px;
+            height: 16px;
+        }
+        
+        .bubble:nth-child(7) {
+            left: 90%;
+            animation-delay: 6s;
+            width: 19px;
+            height: 19px;
+        }
+        
+        @keyframes rise {
+            0% {
+                bottom: -100px;
+                transform: translateX(0);
+                opacity: 0.7;
+            }
+            50% {
+                transform: translateX(100px);
+                opacity: 0.5;
+            }
+            100% {
+                bottom: 100%;
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+        }
+        
+        .water-spray {
+            position: relative;
+        }
+        
+        .water-spray::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="40" stroke="rgba(52,152,219,0.1)" stroke-width="2" stroke-dasharray="1,6" fill="none"/></svg>');
+            opacity: 0.5;
+            animation: spray 6s infinite linear;
+            background-size: 20px 20px;
+        }
+        
+        @keyframes spray {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+        
+        .bounce-animation {
+            animation: bounce 3s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        
+        .slide-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Mobile Optimizations */
+        @media (max-width: 768px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            
+            .work-gallery {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .hero-section {
+                padding: 4rem 1rem;
+            }
+            
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+            
+            .testimonial-card {
+                padding: 1.5rem;
+            }
+            
+            .video-container video {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body class="relative">
+    <!-- Soap bubbles floating upward -->
+    <div class="bubbles-container">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="container mx-auto px-4 py-6 flex justify-between items-center">
+        <div class="flex items-center">
+            <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                <i class="fas fa-car text-white text-2xl"></i>
+            </div>
+            <h1 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h1>
+        </div>
+        <div class="flex space-x-6 items-center">
+            <a href="index.html" class="text-white hover:text-blue-400 transition duration-300">Home</a>
+            <a href="our-work.html" class="text-white hover:text-blue-400 transition duration-300">Our Work</a>
+            <a href="testimonials.html" class="text-white hover:text-blue-400 transition duration-300">Testimonials</a>
+            <a href="#book" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-full transition duration-300">
+                Book Now
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 px-4">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="slide-in" style="animation-delay: 0.3s">
+                <h2 class="text-4xl md:text-7xl font-black mb-6 leading-tight">
+                    Mobile Detailing<br>That Comes to <span class="text-blue-400">You</span>
+                </h2>
+            </div>
+            <div class="slide-in" style="animation-delay: 0.6s">
+                <p class="text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-blue-200">
+                    Premium hand car wash service at your doorstep in Atlanta
+                </p>
+            </div>
+            <div class="slide-in" style="animation-delay: 0.9s">
+                <div class="relative inline-block">
+                    <a href="tel:770-572-8454" class="pulse bg-white text-blue-900 text-xl md:text-2xl font-bold py-4 px-8 rounded-full inline-flex items-center transition hover:scale-105">
+                        <i class="fas fa-phone mr-3 animate-pulse"></i> CALL / TEXT 770-572-8454
+                    </a>
+                </div>
+            </div>
+            <div class="mt-16 max-w-4xl mx-auto slide-in" style="animation-delay: 1.2s">
+                <div class="shine-animation rounded-2xl overflow-hidden">
+                    <div class="aspect-w-16 aspect-h-9 bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="inline-block p-3 bg-black bg-opacity-40 rounded-lg mb-4">
+                                    <i class="fas fa-video text-white text-3xl"></i>
+                                </div>
+                                <h3 class="text-2xl text-white font-bold">Experience Our Premium Service</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Badges Section -->
+    <section class="py-10 px-4">
+        <div class="container mx-auto">
+            <div class="flex flex-wrap justify-center gap-6">
+                <div class="badge-animation bg-white bg-opacity-10 backdrop-blur-sm border border-blue-500 border-opacity-30 rounded-xl px-6 py-4 flex items-center">
+                    <i class="fas fa-star text-yellow-400 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-lg">4.3 Stars</p>
+                        <p class="text-blue-300 text-sm">from 47 Reviews</p>
+                    </div>
+                </div>
+                <div class="badge-animation bg-white bg-opacity-10 backdrop-blur-sm border border-blue-500 border-opacity-30 rounded-xl px-6 py-4 flex items-center">
+                    <i class="fas fa-spa text-blue-300 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-lg">Atlanta's On-Demand</p>
+                        <p class="text-blue-300 text-sm">Auto Spa</p>
+                    </div>
+                </div>
+                <div class="badge-animation bg-white bg-opacity-10 backdrop-blur-sm border border-blue-500 border-opacity-30 rounded-xl px-6 py-4 flex items-center">
+                    <i class="fas fa-map-marker-alt text-blue-300 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-lg">Mobile Only</p>
+                        <p class="text-blue-300 text-sm">We Come to You</p>
+                    </div>
+                </div>
+                <div class="badge-animation bg-white bg-opacity-10 backdrop-blur-sm border border-blue-500 border-opacity-30 rounded-xl px-6 py-4 flex items-center">
+                    <i class="fas fa-city text-blue-300 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-bold text-lg">Servicing</p>
+                        <p class="text-blue-300 text-sm">Greater Atlanta Area</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Book Appointment -->
+    <section id="book" class="py-20 px-4 relative">
+        <div class="container mx-auto max-w-4xl">
+            <div class="bg-gradient-to-br from-blue-900 to-blue-700 rounded-3xl overflow-hidden p-10 slide-in">
+                <h2 class="text-3xl md:text-5xl font-bold text-center mb-10">
+                    Book Your Appointment <span class="text-blue-300">Today</span>
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="text-center p-6 bg-black bg-opacity-30 rounded-xl backdrop-blur-sm border border-blue-400 border-opacity-30 hover:scale-105 transition duration-300">
+                        <div class="inline-block bg-blue-600 p-4 rounded-xl mb-4 bounce-animation">
+                            <i class="fas fa-calendar-check text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Quick Scheduling</h3>
+                        <p class="text-blue-200">Book same-day or next-day appointments</p>
+                    </div>
+                    
+                    <!-- Feature 2 -->
+                    <div class="text-center p-6 bg-black bg-opacity-30 rounded-xl backdrop-blur-sm border border-blue-400 border-opacity-30 hover:scale-105 transition duration-300">
+                        <div class="inline-block bg-blue-600 p-4 rounded-xl mb-4 bounce-animation" style="animation-delay: 0.5s">
+                            <i class="fas fa-map-marked-alt text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Atlanta Area</h3>
+                        <p class="text-blue-200">We service your location anywhere in Atlanta</p>
+                    </div>
+                    
+                    <!-- Feature 3 -->
+                    <div class="text-center p-6 bg-black bg-opacity-30 rounded-xl backdrop-blur-sm border border-blue-400 border-opacity-30 hover:scale-105 transition duration-300">
+                        <div class="inline-block bg-blue-600 p-4 rounded-xl mb-4 bounce-animation" style="animation-delay: 1s">
+                            <i class="fas fa-shield-alt text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Premium Products</h3>
+                        <p class="text-blue-200">Eco-friendly & high-performance materials</p>
+                    </div>
+                </div>
+                
+                <div class="mt-16 text-center">
+                    <div class="inline-block relative group">
+                        <a href="tel:770-572-8454" class="text-white text-2xl font-bold py-5 px-12 rounded-full bg-blue-600 hover:bg-blue-500 transition-all group-hover:scale-105">
+                            CALL / TEXT 770-572-8454
+                        </a>
+                        <div class="absolute -inset-2 bg-blue-600 rounded-full z-[-1] blur-md opacity-80"></div>
+                    </div>
+                    <p class="mt-6 text-blue-300 text-lg">By appointment only - Atlanta, GA</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-4 relative border-t border-blue-900">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-6 md:mb-0">
+                    <div class="bg-blue-600 p-2 rounded-lg mr-3">
+                        <i class="fas fa-car text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-white text-2xl font-bold">MOTLEY<span class="text-blue-400">CREW</span></h3>
+                </div>
+                
+                <div class="text-center">
+                    <div class="flex flex-wrap justify-center gap-4 mb-4">
+                        <a href="https://www.instagram.com/motleycrewautospa/?hl=en" target="_blank" class="w-12 h-12 bg-blue-900 hover:bg-blue-700 rounded-full flex items-center justify-center">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.google.com/maps/place/MotleyCrew+Mobile+Hand+Car+Wash+(Mobile+Detailing)/@33.9191351,-84.505095,13.73z/data=!4m15!1m8!3m7!1s0x88f5116e1d649e55:0xb1fd607985fc1c1!2sMotleyCrew+Mobile+Hand+Car+Wash+(Mobile+Detailing)!8m2!3d33.915429!4d-84.482946!10e1!16s%2Fg%2F11f6kr04mz!3m5!1s0x88f5116e1d649e55:0xb1fd607985fc1c1!8m2!3d33.915429!4d-84.482946!16s%2Fg%2F11f6kr04mz?entry=ttu&g_ep=EgoyMDI1MDYwMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="w-12 h-12 bg-blue-900 hover:bg-blue-700 rounded-full flex items-center justify-center">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                    <p class="text-blue-400">© 2025 MotleyCrew Mobile Hand Car Wash. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation trigger for scroll effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create more bubbles
+            const bubbleContainer = document.querySelector('.bubbles-container');
+            for (let i = 0; i < 20; i++) {
+                const bubble = document.createElement('div');
+                bubble.classList.add('bubble');
+                
+                // Randomize properties
+                const leftPos = Math.floor(Math.random() * 100);
+                const size = Math.floor(Math.random() * 10) + 5;
+                const delay = Math.floor(Math.random() * 10);
+                const duration = Math.floor(Math.random() * 10) + 15;
+                
+                bubble.style.left = leftPos + '%';
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+                bubble.style.animationDuration = duration + 's';
+                bubble.style.animationDelay = delay + 's';
+                
+                bubbleContainer.appendChild(bubble);
+            }
+            
+            // Add slide-in animations to elements when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('slide-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

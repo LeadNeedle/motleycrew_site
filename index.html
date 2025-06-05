@@ -14,7 +14,30 @@
             font-family: 'Poppins', sans-serif;
             background: linear-gradient(135deg, #0c162d 0%, #121c38 100%);
             color: #ffffff;
-            overflow-x: hidden;
+            /* Prevent horizontal scrolling on mobile - add this at the top of your mobile CSS */
+            @media (max-width: 768px) {
+                html {
+                    overflow-x: hidden;
+                    width: 100%;
+                }
+                
+                body {
+                    overflow-x: hidden;
+                    width: 100%;
+                    position: relative;
+                }
+                
+                * {
+                    max-width: 100vw;
+                    box-sizing: border-box;
+                }
+                
+                /* Force all containers to respect viewport width */
+                div, section, header, main, footer, nav {
+                    max-width: 100%;
+                    overflow-x: hidden;
+                }
+            }
             position: relative;
         }
         
